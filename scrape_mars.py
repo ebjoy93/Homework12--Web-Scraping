@@ -1,6 +1,8 @@
 #imports
 from splinter import Browser
 from bs4 import BeautifulSoup
+import time
+import pandas as pd
 
 #chrome driver executable
 executable_path = {"executable_path": "chromedriver.exe"}
@@ -93,7 +95,7 @@ def marsHem():
         image_url = downloads.find("a")["href"]
         dictionary = {"title": title, "img_url": image_url}
         mars_hemisphere.append(dictionary)
-=======
+
 #imports
 from splinter import Browser
 from bs4 import BeautifulSoup
