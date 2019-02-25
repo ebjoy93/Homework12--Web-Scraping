@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #imports
 from splinter import Browser
 from bs4 import BeautifulSoup
@@ -188,5 +187,4 @@ def marsHem():
         image_url = downloads.find("a")["href"]
         dictionary = {"title": title, "img_url": image_url}
         mars_hemisphere.append(dictionary)
->>>>>>> 8da1d07b07b5e590c0b44270efb7ab096c0b6057
     return mars_hemisphere
