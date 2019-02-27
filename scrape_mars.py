@@ -73,7 +73,7 @@ def scarpeAll():
     soup = BeautifulSoup(html, "html.parser")
     mars_hemisphere = []
 
-     products = soup.find("div", class_ = "result-list" )
+    products = soup.find("div", class_ = "result-list" )
     hemispheres = products.find_all("div", class_="item")
 
     for hemisphere in hemispheres:
