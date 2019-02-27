@@ -28,7 +28,7 @@ def scarpeAll():
     #print(news_title)
     #print(news_p)
     
-    output = [news_title, news_p]
+    #output = [news_title, news_p]
 
     #pulling images
     image_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
@@ -80,10 +80,13 @@ def scarpeAll():
         title = hemisphere.find("h3").text
         title = title.replace("Enhanced", "")
         end_link = hemisphere.find("a")["href"]
+        
         image_link = "https://astrogeology.usgs.gov/" + end_link    
+        
         browser.visit(image_link)
         html = browser.html
         soup=BeautifulSoup(html, "html.parser")
+        
         downloads = soup.find("div", class_="downloads")
         image_url = downloads.find("a")["href"]
         mars_hemisphere.append({"title": title, "img_url": image_url})
@@ -94,6 +97,6 @@ def scarpeAll():
 
 #scrape into a dict
 def scrape():
-    final_data = {"output" : "Mars News", "featured_image_url" : "Images", "mars_weather" : "Twitter", "mars_facts" : "Mars Facts"}
+    final_data = {"news_title" : news_title, "news_p" : news_p, "featured_image_url" : featured_image_url, "mars_weather" : mars_weather, "mars_facts" : mars_facts, "mars_hemisphere" : mars_hemisphere}
 
     return final_data
