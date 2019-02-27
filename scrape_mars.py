@@ -101,7 +101,7 @@ from splinter import Browser
 from bs4 import BeautifulSoup
 
 #chrome driver executable
-executable_path = {"executable_path": "/Users/sharonsu/Downloads/chromedriver"}
+executable_path = {"executable_path": "chromedriver.exe"}
 browser = Browser("chrome", **executable_path, headless=False)
 
 
@@ -189,4 +189,5 @@ def marsHem():
         image_url = downloads.find("a")["href"]
         dictionary = {"title": title, "img_url": image_url}
         mars_hemisphere.append(dictionary)
+        
     return mars_hemisphere
