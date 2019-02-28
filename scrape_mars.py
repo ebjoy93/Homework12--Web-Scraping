@@ -95,7 +95,14 @@ def scarpeAll():
 
 
 
-#scrape into a dict
-final_data = {"news_title" : news_title, "news_p" : news_p, "featured_image_url" : featured_image_url, "mars_weather" : mars_weather, "mars_facts" : mars_facts, "mars_hemisphere" : mars_hemisphere}
+    #scrape into a dict
+    final_data = {
+                    "news_title" : news_title,
+                    "news_p" : news_p,
+                    "featured_image_url" : featured_image_url,
+                    "mars_weather" : mars_weather,
+                    "mars_facts" : mars_facts,
+                    "mars_hemisphere" : mars_hemisphere
+                }
 
-return final_data
+    return final_data
