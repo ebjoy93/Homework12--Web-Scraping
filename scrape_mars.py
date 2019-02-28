@@ -43,9 +43,12 @@ def scrape():
     #print(featured_image_url)
 
     #pulling twitter info
-    mars_weather_url = 'https://twitter.com/marswxreport?lang=en'
+   mars_weather_url = 'https://twitter.com/marswxreport?lang=en'
     browser.visit(mars_weather_url)
     time.sleep(1)
+    
+    mars_weather_html = browser.html
+    mars_weather_soup = BeautifulSoup(mars_weather_html, 'html.parser')
     
     tweets = mars_weather_soup.find('ol', class_='stream-items')
     mars_weather = tweets.find('p', class_="tweet-text").text
