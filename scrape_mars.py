@@ -38,7 +38,7 @@ def scrape():
     image = soup.find("div",{"class":"carousel_items"})
 
     featured_img = soup.find("article", style = "background-image")
-    featured_img_url = featured_img_url = image_url + featured_img
+    #featured_img_url = image_url + featured_img
 
     #print(featured_image_url)
 
