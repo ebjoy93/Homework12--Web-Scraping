@@ -5,15 +5,15 @@ import time
 import pandas as pd
 
 #chrome driver executable
-executable_path = {"executable_path": "chromedriver.exe"}
-browser = Browser("chrome", **executable_path, headless=False)
-
-
-#pulling mars news
+def init_browser():
+    executable_path = {"executable_path": "chromedriver.exe"}
+    return Browser("chrome", **executable_path, headless=False)
 
 def scarpeAll():
     
     #mars news
+    browser = init_browser()
+    
     news_url = "https://mars.nasa.gov/news/"
     browser.visit(news_url)
     time.sleep(1)
@@ -96,7 +96,6 @@ def scarpeAll():
 
 
 #scrape into a dict
-def scrape():
-    final_data = {"news_title" : news_title, "news_p" : news_p, "featured_image_url" : featured_image_url, "mars_weather" : mars_weather, "mars_facts" : mars_facts, "mars_hemisphere" : mars_hemisphere}
+final_data = {"news_title" : news_title, "news_p" : news_p, "featured_image_url" : featured_image_url, "mars_weather" : mars_weather, "mars_facts" : mars_facts, "mars_hemisphere" : mars_hemisphere}
 
-    return final_data
+return final_data
