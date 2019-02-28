@@ -35,9 +35,13 @@ def scrape():
     browser.visit(image_url)
     time.sleep(1)    
     
-    image = soup.find("div",{"class":"carousel_items"})
+    image = soup.find('a', class_ = 'fancybox')
+    featured_img = image['data-fancybox-href']
+    
+    
+    #image = soup.find("div",{"class":"carousel_items"})
 
-    featured_img = soup.find("article", style = "background-image")
+    #featured_img = soup.find("article", style = "background-image")
     #featured_img_url = image_url + featured_img
 
     #print(featured_image_url)
