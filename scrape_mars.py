@@ -33,14 +33,10 @@ def scrape():
     #pulling images
     image_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(image_url)
-    time.sleep(1)    
-    
-    image = soup.find('a', class_ = 'fancybox')
-    featured_img = image['data-fancybox-href']
-    
-    
-    #image = soup.find("div",{"class":"carousel_items"})
+    time.sleep(1) 
 
+    image = soup.find("div",{"class":"carousel_items"})
+    featured_img = soup.select('article[style = "url('/spaceimages/images/wallpaper/PIA00069-1920x1200.jpg"]')
     #featured_img = soup.find("article", style = "background-image")
     #featured_img_url = image_url + featured_img
 
