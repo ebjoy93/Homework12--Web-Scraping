@@ -33,12 +33,12 @@ def scrape():
     #pulling images
     image_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(image_url)
-    time.sleep(1)
+    time.sleep(1)    
     
     image = soup.find("div",{"class":"carousel_items"})
 
     featured_img = soup.find("article")
-    featured_img_url = image_url + featured_img
+    featured_img_url = "https://www.jpl.nasa.gov" + featured_img
 
     #print(featured_image_url)
 
