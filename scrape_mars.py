@@ -36,8 +36,7 @@ def scrape():
     time.sleep(1) 
 
     image = soup.find("div",{"class":"carousel_items"})
-    featured_img = soup.select('article[style = "/spaceimages/images/wallpaper/PIA00069-1920x1200.jpg"]')
-    #featured_img = soup.find("article", style = "background-image")
+    featured_img = soup.find("article", style = "background-image")
     #featured_img_url = image_url + featured_img
 
     #print(featured_image_url)
