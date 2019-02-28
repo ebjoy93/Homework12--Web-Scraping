@@ -43,7 +43,7 @@ def scrape():
     #print(featured_image_url)
 
     #pulling twitter info
-   mars_weather_url = 'https://twitter.com/marswxreport?lang=en'
+    mars_weather_url = 'https://twitter.com/marswxreport?lang=en'
     browser.visit(mars_weather_url)
     time.sleep(1)
     
