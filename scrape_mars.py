@@ -9,7 +9,7 @@ def init_browser():
     executable_path = {"executable_path": "chromedriver.exe"}
     return Browser("chrome", **executable_path, headless=False)
 
-def scarpe():
+def scrape():
     
     #mars news
     browser = init_browser()
