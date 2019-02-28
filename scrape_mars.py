@@ -35,8 +35,10 @@ def scrape():
     browser.visit(image_url)
     time.sleep(1)
     
-    image = soup.find("img", class_="thumb")["src"]
-    featured_image_url = "https://www.jpl.nasa.gov" + image
+    image = soup.find("div",{"class":"carousel_items"})
+
+    featured_img = image.find("article")
+    featured_img_url = image_url+featured_img['style'].split(':')[1].split('\'')[1]
 
     #print(featured_image_url)
 
